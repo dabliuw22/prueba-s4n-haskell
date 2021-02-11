@@ -49,7 +49,7 @@ spec = do
     context "eval DDDAIAD" $ do
       it "Should return a (-1, -1) East" $ do
         let cmd = "DDDAIAD"
-            result = fromRight "" (show . eval <$> (makeCmd cmd))
+            result = fromRight "" (show . eval <$> makeCmd cmd)
             expected = "(-1, -1) East"
         result `shouldBe` expected
     context "makeCmd AAIADAD" $ do
