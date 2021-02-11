@@ -13,7 +13,14 @@ module Core.Dsl
   )
 where
 
-import Control.Lens (Field1 (_1), makeLenses, makePrisms, (%~), (&), (?~))
+import Control.Lens
+  ( Field1 (_1),
+    makeLenses,
+    makePrisms,
+    (%~),
+    (&),
+    (?~),
+  )
 import Data.Maybe (fromJust)
 
 data Direction = North | South | East | West deriving (Show)
