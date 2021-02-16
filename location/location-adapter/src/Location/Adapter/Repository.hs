@@ -1,4 +1,7 @@
-module Location.Adapter.Repository (LocationRepository (..)) where
+module Location.Adapter.Repository
+  ( LocationRepository (..),
+  )
+where
 
 import Core.Dsl
   ( Drone (..),
