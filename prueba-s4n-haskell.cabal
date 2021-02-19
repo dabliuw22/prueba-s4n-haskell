@@ -1,0 +1,104 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 854afc96d3d0e8d20c1ae2f70f8f976aca72e5158577b8797c366bd1d3f675f8
+
+name:           prueba-s4n-haskell
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/dabliuw22/prueba-s4n-haskell#readme>
+homepage:       https://github.com/dabliuw22/prueba-s4n-haskell#readme
+bug-reports:    https://github.com/dabliuw22/prueba-s4n-haskell/issues
+author:         Will Leyton
+maintainer:     wleylop22@gmail.com
+copyright:      2021 Will Leyton
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/dabliuw22/prueba-s4n-haskell
+
+library
+  exposed-modules:
+      App
+  other-modules:
+      Paths_prueba_s4n_haskell
+  hs-source-dirs:
+      src
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+    , core-s4n
+    , delivery-adapter
+    , delivery-application
+    , delivery-domain
+    , envs
+    , exceptions
+    , files
+    , hspec
+    , katip >=0.1.0.0 && <0.8.6.0
+    , location-adapter
+    , location-application
+    , location-domain
+    , logs
+  default-language: Haskell2010
+
+executable prueba-s4n-haskell-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_prueba_s4n_haskell
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+    , core-s4n
+    , delivery-adapter
+    , delivery-application
+    , delivery-domain
+    , envs
+    , exceptions
+    , files
+    , hspec
+    , katip >=0.1.0.0 && <0.8.6.0
+    , location-adapter
+    , location-application
+    , location-domain
+    , logs
+    , prueba-s4n-haskell
+  default-language: Haskell2010
+
+test-suite prueba-s4n-haskell-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_prueba_s4n_haskell
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+    , core-s4n
+    , delivery-adapter
+    , delivery-application
+    , delivery-domain
+    , envs
+    , exceptions
+    , files
+    , hspec
+    , katip >=0.1.0.0 && <0.8.6.0
+    , location-adapter
+    , location-application
+    , location-domain
+    , logs
+    , prueba-s4n-haskell
+  default-language: Haskell2010
