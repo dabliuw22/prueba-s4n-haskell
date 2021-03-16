@@ -30,3 +30,13 @@ $ export LOGS_FILENAME={your_logs_filename} # default: prueba-s4n-haskell.log
 $ export APP_NAME={your_app_name} # default: prueba-s4n-haskell
 $ export APP_ENV={your_app_env} # default: local 
 ```
+
+## Build
+```shell
+$ stack build prueba-s4n-haskell
+```
+
+## Run
+```shell
+$ stack exec prueba-s4n-haskell-exe
+```
