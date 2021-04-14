@@ -19,6 +19,8 @@ extra-source-files:  CHANGELOG.md
 library
   exposed-modules:
     Files.File
+    Files.Dsl
+    Files.Interpreter
   other-modules:
       Paths_files
   hs-source-dirs:
@@ -33,6 +35,7 @@ library
     , conduit-extra
     , directory
     , filepath
+    , free
     , katip >= 0.1.0.0 && < 0.8.6.0
     , resourcet
     , text
