@@ -21,6 +21,7 @@ library
   exposed-modules:
         Location.Adapter.Config.LocationConfig
         Location.Adapter.Repository
+        Location.Adapter.Interpreter
   other-modules:
         Paths_location_adapter
   hs-source-dirs:
@@ -29,6 +30,7 @@ library
         async
       , base >= 4.7 && < 5
       , MissingH
+      , free
       , envs
       , logs
       , files

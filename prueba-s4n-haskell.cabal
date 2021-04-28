@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 854afc96d3d0e8d20c1ae2f70f8f976aca72e5158577b8797c366bd1d3f675f8
+-- hash: 7384f0833e521e4ba8ee7c69f54632a2f8be0bd0d7fce1e282334c38c1286ed3
 
 name:           prueba-s4n-haskell
 version:        0.1.0.0
@@ -28,6 +28,8 @@ source-repository head
 library
   exposed-modules:
       App
+      AppF
+      Env
   other-modules:
       Paths_prueba_s4n_haskell
   hs-source-dirs:
@@ -42,12 +44,14 @@ library
     , envs
     , exceptions
     , files
+    , free
     , hspec
     , katip >=0.1.0.0 && <0.8.6.0
     , location-adapter
     , location-application
     , location-domain
     , logs
+    , mtl
   default-language: Haskell2010
 
 executable prueba-s4n-haskell-exe
@@ -67,12 +71,14 @@ executable prueba-s4n-haskell-exe
     , envs
     , exceptions
     , files
+    , free
     , hspec
     , katip >=0.1.0.0 && <0.8.6.0
     , location-adapter
     , location-application
     , location-domain
     , logs
+    , mtl
     , prueba-s4n-haskell
   default-language: Haskell2010
 
@@ -94,11 +100,13 @@ test-suite prueba-s4n-haskell-test
     , envs
     , exceptions
     , files
+    , free
     , hspec
     , katip >=0.1.0.0 && <0.8.6.0
     , location-adapter
     , location-application
     , location-domain
     , logs
+    , mtl
     , prueba-s4n-haskell
   default-language: Haskell2010
