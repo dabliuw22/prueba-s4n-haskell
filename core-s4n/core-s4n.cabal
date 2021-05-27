@@ -19,12 +19,17 @@ extra-source-files:  CHANGELOG.md
 library
   exposed-modules:
       Core.Dsl
+      Core.Fsl
+      Core.Drone
+      Core.Interpreter
+      Core.Service
   other-modules:
       Paths_core_s4n
   hs-source-dirs:
       src
   build-depends:
-        base >= 4.7 && < 5
+        base >= 4.7 && < 5 
+      , free
       , lens >=4.0 && <4.20
   default-language: Haskell2010
 
@@ -42,6 +47,7 @@ test-suite core-s4n-test
     , base >=4.5 && <5
     , bytestring >=0.10.10 && <0.11
     , exceptions
+    , free
     , hspec
     , lens >=4.0 && <4.20
     , text
